@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="bg-gray-100 p-5">
+
+    <div class="max-w-5xl mx-auto">
+        <header class="text-center mb-10">
+            <h1 class="text-3xl font-bold text-slate-800">Job Application Tracker</h1>
+        </header>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-10">
+            <div class="bg-white p-5 rounded shadow text-center">
+                <p class="text-gray-500">Total Jobs</p>
+                <h1 id="total-jobs" class="text-3xl font-bold">8</h1>
+            </div>
+            <div class="bg-white p-5 rounded-full shadow text-center">
+                <!-- intervew ar div ta issa koree rounded-full kore dici issa korce tai -->
+                <p class="text-gray-500 text-emerald-600">Interview</p>
+                <h1 id="interview-count" class="text-3xl font-bold text-emerald-600">0</h1>
+            </div>
+            <div class="bg-white p-5 rounded shadow text-center">
+                <p class="text-gray-500 text-red-500">Rejected</p>
+                <h1 id="rejected-count" class="text-3xl font-bold text-red-500">0</h1>
+            </div>
+        </div>
+
+        <div class="flex justify-between items-center mb-5">
+            <h2 class="text-xl font-bold uppercase">Available Jobs</h2>
+            <div id="top-count" class="text-gray-500">8 jobs</div>
+        </div>
+
+        <div class="flex gap-10 mb-8">
+            <button onclick="showOnly('all')" id="btn-all" class="btn btn-outline btn-sm bg-blue-600 text-white font-bold">All</button>
+            <button onclick="showOnly('interview')" id="btn-interview" class="btn btn-outline btn-sm font bold">Interview</button>
+            <button onclick="showOnly('rejected')" id="btn-rejected" class="btn btn-outline btn-sm  font-bold ">Rejected</button>
+        </div>
+
+        <div id="main-container" class="space-y-4">
+            </div>
+
+        <div id="no-data" class="hidden text-center py-20 bg-white rounded border">
+            <!-- <i class="fa-solid fa-file-circle-xmark text-5xl text-gray-300 mb-3"></i> -->
+             <img src="jobs.png" alt="" class="mb-3 mx-auto">
+            <h2 class="text-xl font-bold text-gray-600">No Jobs Available</h2>
+            <p class="text-gray-400">Please check other tabs.</p>
+        </div>
+    </div>
+
+    <script src="script/app.js"></script>
+</body>
+</html>
+
+
+
+
+
