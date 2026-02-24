@@ -59,7 +59,7 @@ function setStatus(id, newStatus) {
     for (let i = 0; i < myJobs.length; i++) {
         if (myJobs[i].id === id) {
             if (myJobs[i].status === newStatus) {
-                myJobs[i].status = "all"; // Toggle back
+                myJobs[i].status = "all";
             } else {
                 myJobs[i].status = newStatus;
             }
